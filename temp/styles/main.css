@@ -7,6 +7,17 @@ span, ul li {
 }
 
 /* line 9, ../../app/styles/main.scss */
+.avatar {
+  float: right;
+}
+
+/* line 13, ../../app/styles/main.scss */
+.avatar img {
+  height: 50px;
+  width: 50px;
+}
+
+/* line 18, ../../app/styles/main.scss */
 .done-true {
   text-decoration: line-through;
   color: grey;

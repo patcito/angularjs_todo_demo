@@ -6,7 +6,7 @@ todoApp.directive('avatar', function() {
       userName: '='
     },
     restrict: 'E',
-    template: '<div class="pull-right">' +
+    template: '<div class="avatar">' +
                 '<img ng-src="img/{{userName}}.jpg" class="thumbnail">' +
                 '<h4>{{userName}}</h4>' +
               '</div>'

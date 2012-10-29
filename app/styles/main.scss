@@ -6,6 +6,15 @@ span, ul li {
   font-size: 22px;
 }
 
+.avatar {
+  float: right;
+}
+
+.avatar img {
+  height: 50px;
+  width: 50px;
+}
+
 .done-true {
   text-decoration: line-through;
   color: grey;
