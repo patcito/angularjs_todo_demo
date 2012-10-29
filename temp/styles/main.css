@@ -1,2 +1,13 @@
 @import url(../components/bootstrap/css/bootstrap.css);
 @import url(../components/bootstrap/css/bootstrap-responsive.css);
+/* line 4, ../../app/styles/main.scss */
+span, ul li {
+  line-height: 65px;
+  font-size: 22px;
+}
+
+/* line 9, ../../app/styles/main.scss */
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}

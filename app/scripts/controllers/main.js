@@ -3,15 +3,19 @@
 todoApp.controller('MainCtrl', function($scope) {
   $scope.name = "Pat";
 
+  $scope.minions = ["Igor", "Misko", "Vojta"];
+
   $scope.todos = [
-    {text: "introduce AngularJS", done: true},
-    {text: "build a todo app", done: false},
+    {text: "introduce AngularJS", done: true, minion: 'Igor'},
+    {text: "build a todo app", done: false, minion: 'Vojta'},
+    {text: "show components", done: false, minion: 'Misko'},
   ]
 
   $scope.addTodo = function(){
     console.log($scope)
-    $scope.todos.push({text: $scope.newTodo, 
-                      done: false});
+    $scope.todos.push({text: $scope.newTodo.text, 
+                      done: false,
+                      minion: $scope.newTodo.minion});
     $scope.newTodo = '';
   }
   $scope.remaining = function() {
