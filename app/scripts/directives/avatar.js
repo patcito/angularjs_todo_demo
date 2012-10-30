@@ -3,12 +3,12 @@
 todoApp.directive('avatar', function() {
   return {
     scope: {
-      userName: '='
+      minionName: '='
     },
     restrict: 'E',
     template: '<div class="avatar">' +
-                '<img ng-src="img/{{userName}}.jpg" class="thumbnail">' +
-                '<h4>{{userName}}</h4>' +
+                '<img ng-src="img/{{minionName}}.jpg" class="thumbnail">' +
+                '<h4>{{minionName}}</h4>' +
               '</div>'
   };
 });
