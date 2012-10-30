@@ -3,43 +3,28 @@
 </div>
 <div class=row>
   <div class=span4>
-    <span>XXX of YYY remaining</span>
-    [ <a href="">archive</a> ]
+    <span>{{remaining()}} of {{todos.length}} remaining</span>
+    [ <a href="" data-ng-click="archive()">archive</a> ]
     <ul class="unstyled span4">
-      <li class=clearfix>
-        <input type="checkbox">
-        <span>Introduce AngularJS</span>
-        <div class="pull-right">
-          <img ng-src="img/Igor.jpg" class="thumbnail">
-          <h4>Igor</h4>
-        </div>
-      </li>
-      <li class=clearfix>
-        <input type="checkbox">
-        <span>Build this Todo App</span>
-        <div class="avatar">
-          <img ng-src="img/Vojta.jpg" class="thumbnail">
-          <h4>Vojta</h4>
-        </div>
-      </li>
-      <li class=clearfix>
-        <input type="checkbox">
-        <span>Show up components</span>
-        <div class="pull-right">
-          <img ng-src="img/Misko.jpg" class="thumbnail">
-          <h4>Misko</h4>
-        </div>
+      <li class="clearfix todo-{{todo.done}}"
+      data-ng-repeat='todo in todos'>
+        <input
+        data-ng-model="todo.done"
+        type="checkbox">
+        <span>{{todo.text}}</span>
+        <x-avatar data-minion-name="todo.minion"></x-avatar>
       </li>
     </ul>
   </div>
 </div>
 <div class=row>
   <div class="span4">
-    <form>
+    <form data-ng-submit="addTodo()">
       <input type="text"size="30"
+      data-ng-model="newTodo.text"
       placeholder="add new todo here"
       required>
-      <select required>
+      <select required data-ng-model="newTodo.minion">
         <option required>Igor</option>
         <option required>Misko</option>
         <option required>Vojta</option>
