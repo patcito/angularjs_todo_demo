@@ -1,6 +1,8 @@
 'use strict';
 
 todoApp.controller('MainCtrl', function($scope) {
+  $scope.name = 'Pat';
+
   $scope.todos = [
     {text: "introduce AngularJS", done: true, minion: 'Igor'},
     {text: "build the todo app", done: false, minion: 'Vojta'},
@@ -11,7 +13,7 @@ todoApp.controller('MainCtrl', function($scope) {
     $scope.todos.push({
       text: $scope.newTodo.text,
       done: false,
-      minion: $scope.newTodo.minion                                   
+      minion: $scope.newTodo.minion
     })
     $scope.newTodo.text = '';
   }
