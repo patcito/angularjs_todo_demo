@@ -1,0 +1,12 @@
+The master branch contains the demo app fully done.
+
+Use the demo branch to start live coding.
+
+Dependencies: nodejs, yeoman.
+
+Run:
+
+    npm install
+
+Start the server with:
+    yeoman server
